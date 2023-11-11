@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mandala Generator</title>
+    <title>Mandala Maker</title>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Urbanist', sans-serif;
-            background-color: #333;
+            background-color: #141414;
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -19,7 +19,7 @@
             display: flex;
             align-items: center; /* Aligns items vertically center */
             gap: 10px; /* Adjust the space between the logo and the title */
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .logo {
@@ -56,6 +56,7 @@
             font-size: 12px;
             color: #bbb;
             margin-top: 5px;
+            margin-bottom: 10px;
         }
         input[type=range] {
             -webkit-appearance: none;
@@ -81,12 +82,11 @@
             padding: 10px;
             border: 1px solid #777;
             border-radius: 10px;
-            margin-top: 5px;
         }
 
         .checkbox-container:first-child {
-    margin-right: 10px; /* Adjust the space as needed */
-}
+            margin-right: 10px; /* Adjust the space as needed */
+        }
 
         .checkbox-label {
             display: flex;
@@ -177,7 +177,7 @@
 <body>
   <div class="header">
 <img class="logo" src="data:image/png;base64,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">
-<h3 class="title">Mandala Generator</h3>
+<h3 class="title">Mandala Maker</h3>
 </div>
     <div class="row">
       <div class="control-group">
@@ -185,7 +185,7 @@
               <div class="icon symmetry-icon" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;><path fill=&quot;none&quot; stroke=&quot;white&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M7.5 4.21v.01M4.21 7.5v.01M3 12v.01m1.21 4.49v.01m3.29 3.28v.01M12 21v.01m4.5-1.22v.01m3.29-3.3v.01M21 12v.01M19.79 7.5v.01m-3.29-3.3v.01M12 3v.01&quot;/></svg>');"></div>
               Symmetry:
           </label>
-          <input type="range" id="symmetry" min="4" max="20" value="8">
+          <input type="range" id="symmetry" min="4" max="100" value="10">
           <span class="description">Adjusts the number of symmetrical segments.</span>
       </div>
 
@@ -194,7 +194,7 @@
                 <div class="icon spacing-icon" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;><path fill=&quot;white&quot; d=&quot;M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z&quot;/></svg>');"></div>
                 Inner-Layer Spacing:
             </label>
-            <input type="range" id="spacing" min="50" max="300" value="100">
+            <input type="range" id="spacing" min="50" max="1000" value="100">
             <span class="description">Controls the space between inner layers.</span>
         </div>
     </div>
@@ -205,7 +205,7 @@
                 <div class="icon layer-spacing-icon" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;><path fill=&quot;white&quot; d=&quot;M20.788 3.832c-.101-.105-.197-.213-.301-.317c-.103-.103-.211-.202-.32-.302A11.903 11.903 0 0 0 12 0a11.926 11.926 0 0 0-8.486 3.514C-1.062 8.09-1.16 15.47 3.213 20.168c.099.108.197.214.3.32c.104.103.21.2.317.3A11.92 11.92 0 0 0 12 24c3.206 0 6.22-1.247 8.487-3.512c4.576-4.576 4.673-11.956.301-16.656zm-16.655.301A11.057 11.057 0 0 1 12 .874c2.825 0 5.49 1.048 7.55 2.958l-1.001 1.002A9.646 9.646 0 0 0 12 2.292a9.644 9.644 0 0 0-6.865 2.844A9.644 9.644 0 0 0 2.292 12c0 2.448.9 4.753 2.542 6.549L3.831 19.55C-.201 15.191-.101 8.367 4.133 4.133zm13.798 1.318v.002l-1.015 1.014A7.346 7.346 0 0 0 12 4.589A7.357 7.357 0 0 0 6.761 6.76A7.362 7.362 0 0 0 4.589 12a7.34 7.34 0 0 0 1.877 4.913l-1.014 1.016A8.77 8.77 0 0 1 3.167 12a8.77 8.77 0 0 1 2.588-6.245A8.771 8.771 0 0 1 12 3.167c2.213 0 4.301.809 5.931 2.284zM18.537 12c0 1.745-.681 3.387-1.916 4.622S13.746 18.538 12 18.538a6.491 6.491 0 0 1-4.296-1.621l-.001-.004c-.11-.094-.22-.188-.324-.291a6.027 6.027 0 0 1-.293-.326A6.47 6.47 0 0 1 5.466 12c0-1.746.679-3.387 1.914-4.621A6.488 6.488 0 0 1 12 5.465c1.599 0 3.105.576 4.295 1.62c.111.096.224.19.326.295c.104.104.2.214.295.324A6.482 6.482 0 0 1 18.537 12zM7.084 17.534h.001A7.349 7.349 0 0 0 12 19.413a7.35 7.35 0 0 0 5.239-2.174A7.354 7.354 0 0 0 19.412 12a7.364 7.364 0 0 0-1.876-4.916l1.013-1.012A8.777 8.777 0 0 1 20.834 12a8.765 8.765 0 0 1-2.589 6.246A8.764 8.764 0 0 1 12 20.834a8.782 8.782 0 0 1-5.93-2.285l1.014-1.015zm12.783 2.333A11.046 11.046 0 0 1 12 23.125a11.042 11.042 0 0 1-7.551-2.957l1.004-1.001a9.64 9.64 0 0 0 6.549 2.542a9.639 9.639 0 0 0 6.865-2.846A9.642 9.642 0 0 0 21.71 12a9.64 9.64 0 0 0-2.543-6.548l1.001-1.002c4.031 4.359 3.935 11.182-.301 15.417z&quot;></path></svg>');"></div>
                 Outer Layer Spacing:
             </label>
-            <input type="range" id="layerSpacing" min="20" max="200" value="50">
+            <input type="range" id="layerSpacing" min="20" max="1000" value="50">
             <span class="description">Adjusts the spacing of the outermost layer.</span>
         </div>
 

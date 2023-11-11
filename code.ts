@@ -1,4 +1,4 @@
-figma.showUI(__html__, { width: 450, height: 590 });
+figma.showUI(__html__, { width: 440, height: 610 });
 
 figma.ui.onmessage = async msg => {
     if (msg.type === 'generate-mandala') {
